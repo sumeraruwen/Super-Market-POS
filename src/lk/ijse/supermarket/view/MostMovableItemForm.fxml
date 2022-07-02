@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="940.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.MostMovableItemFormController">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="132.0" prefHeight="800.0" prefWidth="1139.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblMovableItems" layoutX="9.0" layoutY="87.0" prefHeight="713.0" prefWidth="1121.0">
+               <columns>
+                  <TableColumn fx:id="colCode" prefWidth="562.0" text="Item Code" />
+                  <TableColumn fx:id="colQty" prefWidth="558.0" text="Qty" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="43.0" layoutY="102.0" prefHeight="82.0" prefWidth="1087.0" style="-fx-background-color: #fc5c4b;">
+         <children>
+            <Label layoutX="28.0" layoutY="25.0" text="Most Movable Items" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

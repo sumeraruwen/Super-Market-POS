@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="940.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.CashierDashFormController">
+   <children>
+      <AnchorPane fx:id="cashierDashContext" prefHeight="946.0" prefWidth="326.0" style="-fx-background-color: #ffffff;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXButton layoutX="26.0" layoutY="124.0" onAction="#btnPlaceOrderOnAction" prefHeight="58.0" prefWidth="274.0" style="-fx-background-color: #fc5c4b;" text="Place Order" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="26.0" layoutY="215.0" onAction="#btnAddCustomerOnAction" prefHeight="58.0" prefWidth="274.0" text="Add Customer">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" layoutX="52.0" layoutY="161.0" size="25" />
+            <FontAwesomeIconView fill="#cdc1c1" glyphName="USER" layoutX="56.0" layoutY="254.0" size="25" text="" />
+            <Label layoutX="103.0" layoutY="37.0" prefHeight="43.0" prefWidth="120.0" text="DELUXE" textFill="#ff9800">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="26.0" layoutY="302.0" onAction="#btnOrderDetailsOnAction" prefHeight="58.0" prefWidth="274.0" text="Order Details">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="#cdc1c1" glyphName="SHOPPING_CART" layoutX="55.0" layoutY="339.0" size="25" />
+            <JFXButton layoutX="26.0" layoutY="388.0" onAction="#btnSignOutOnAction" prefHeight="58.0" prefWidth="274.0" text="Sign Out">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="#cdc1c1" glyphName="SIGN_OUT" layoutX="55.0" layoutY="425.0" size="25" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="31.0" layoutY="99.0" prefHeight="4.0" prefWidth="274.0" />
+      <AnchorPane fx:id="cashierDashFormContext" layoutX="326.0" layoutY="6.0" prefHeight="940.0" prefWidth="1164.0" />
+   </children>
+</AnchorPane>

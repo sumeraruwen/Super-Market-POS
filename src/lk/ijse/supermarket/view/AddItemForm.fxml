@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="940.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.AddItemFormController">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="43.0" prefHeight="870.0" prefWidth="1112.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="25.0" layoutY="-35.0" prefHeight="83.0" prefWidth="1052.0" style="-fx-background-color: #fc5c4b;">
+               <children>
+                  <Label layoutX="48.0" layoutY="26.0" text="Add Products" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <JFXTextField fx:id="txtCode" labelFloat="true" layoutX="57.0" layoutY="103.0" prefHeight="47.0" prefWidth="725.0" promptText="Item Code *">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="51.0" layoutY="193.0" prefHeight="47.0" prefWidth="725.0" promptText="Description *">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="51.0" layoutY="285.0" prefHeight="47.0" prefWidth="725.0" promptText="Qty On Hand *">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="51.0" layoutY="380.0" prefHeight="47.0" prefWidth="725.0" promptText="Unit Price *">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXTextField>
+            <TableView fx:id="tblItems" layoutX="25.0" layoutY="480.0" prefHeight="380.0" prefWidth="1059.0">
+              <columns>
+                <TableColumn fx:id="colCode" prefWidth="163.0" text="Item Code" />
+                  <TableColumn fx:id="colDescription" prefWidth="405.0" text="Description" />
+                  <TableColumn fx:id="colQtyOnHand" prefWidth="153.0" text="Qty On Hand" />
+                  <TableColumn fx:id="colPrice" prefWidth="337.0" text="Unit Price" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnSave" layoutX="837.0" layoutY="234.0" onAction="#btnSave_OnAction" prefHeight="61.0" prefWidth="198.0" style="-fx-background-color: #fc5c4b;" text="SAVE PRODUCT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" layoutX="837.0" layoutY="349.0" onAction="#btnDelete_OnAction" prefHeight="61.0" prefWidth="198.0" style="-fx-background-color: #fc5c4b;" text="DELETE PRODUCT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAddNewItem" layoutX="837.0" layoutY="113.0" onAction="#btnAddNew_OnAction" prefHeight="61.0" prefWidth="198.0" style="-fx-background-color: #fc5c4b;" text="+ NEW ITEM" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

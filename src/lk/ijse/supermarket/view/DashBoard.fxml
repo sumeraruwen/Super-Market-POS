@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="940.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.DashBoardController">
+   <children>
+      <Circle fill="WHITE" layoutX="1025.0" layoutY="63.0" radius="27.0" stroke="WHITE" strokeType="INSIDE" />
+      <AnchorPane fx:id="dashBoardContext" layoutX="606.0" layoutY="588.0" prefHeight="338.0" prefWidth="550.0" style="-fx-background-color: white;">
+         <children>
+            <AreaChart fx:id="areaChart" layoutX="25.0" layoutY="-105.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </AreaChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="55.0" layoutY="588.0" prefHeight="338.0" prefWidth="527.0" style="-fx-background-color: white;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="149.0" layoutX="48.0" layoutY="174.0" stroke="WHITE" strokeType="INSIDE" width="328.0">
+         <effect>
+            <DropShadow color="#d3cece" height="11.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4caf50" height="104.0" layoutX="71.0" layoutY="147.0" stroke="WHITE" strokeType="INSIDE" width="104.0">
+         <effect>
+            <DropShadow color="#d3cece" height="11.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="149.0" layoutX="429.0" layoutY="174.0" stroke="WHITE" strokeType="INSIDE" width="328.0">
+         <effect>
+            <DropShadow color="#d3cece" height="11.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00bcd4" height="104.0" layoutX="452.0" layoutY="147.0" stroke="WHITE" strokeType="INSIDE" width="104.0">
+         <effect>
+            <DropShadow color="#d3cece" height="11.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="149.0" layoutX="808.0" layoutY="174.0" stroke="WHITE" strokeType="INSIDE" width="328.0">
+         <effect>
+            <DropShadow color="#d3cece" height="11.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9800" height="104.0" layoutX="831.0" layoutY="147.0" stroke="WHITE" strokeType="INSIDE" width="104.0">
+         <effect>
+            <DropShadow color="#d3cece" height="11.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="293.0" layoutY="185.0" opacity="0.66" text="Orders">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="678.0" layoutY="185.0" opacity="0.66" text="Items">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="1068.0" layoutY="185.0" opacity="0.66" text="Sales">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="71.0" layoutY="303.0" opacity="0.65" prefHeight="3.0" prefWidth="286.0" />
+      <Separator layoutX="452.0" layoutY="305.0" opacity="0.65" prefHeight="3.0" prefWidth="286.0" />
+      <Separator layoutX="835.0" layoutY="303.0" opacity="0.65" prefHeight="3.0" prefWidth="286.0" />
+      <Label fx:id="lblTotalOrders" layoutX="315.0" layoutY="217.0" text="5">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalItems" layoutX="692.0" layoutY="217.0" text="2">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalSales" layoutX="1016.0" layoutY="217.0" prefHeight="45.0" prefWidth="104.0" text="7000">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="WHITE" glyphName="CART_ARROW_DOWN" layoutX="489.0" layoutY="209.0" size="35" />
+      <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" layoutX="106.0" layoutY="209.0" size="35" />
+      <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" layoutX="869.0" layoutY="207.0" size="35" text="" />
+      <BarChart fx:id="barchart" animated="false" layoutX="48.0" layoutY="400.0" legendSide="TOP" prefHeight="498.0" prefWidth="510.0" title="Order Statistics">
+         <xAxis>
+            <CategoryAxis fx:id="caId" label="Item Id" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="naSales" label="Sales" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <JFXTextField layoutX="799.0" layoutY="33.0" opacity="0.54" prefHeight="39.0" prefWidth="201.0" promptText="Search...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIconView fill="#9e9999" glyphName="SEARCH" layoutX="1016.0" layoutY="71.0" opacity="0.64" size="21" text="" />
+      <FontAwesomeIconView fill="#514f4f" glyphName="TH_LARGE" layoutX="1075.0" layoutY="72.0" size="25" text="" />
+      <FontAwesomeIconView fill="#514f4f" glyphName="SIGN_OUT" layoutX="1125.0" layoutY="72.0" size="25" />
+      <JFXButton layoutX="1067.0" layoutY="47.0" prefHeight="28.0" prefWidth="40.0" />
+      <JFXButton layoutX="1117.0" layoutY="48.0" onAction="#btnSignOutOnAction" prefHeight="28.0" prefWidth="40.0" />
+   </children>
+</AnchorPane>
